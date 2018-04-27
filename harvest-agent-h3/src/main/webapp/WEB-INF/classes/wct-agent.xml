@@ -28,6 +28,8 @@
 		<property name="logReaderService" value="${harvestAgent.logReaderService}"/>
 		<!-- the name of the agent. must be unique -->
 		<property name="name" value="${harvestAgent.name}"/>
+		<!-- the harvester type of the agent. -->
+		<property name="harvesterType" value="${harvestAgent.harvesterType}"/>
 		<!-- the note to send with the harvest result. -->
 		<property name="provenanceNote" value="${harvestAgent.provenanceNote}"/>
 		<!-- the number of alerts that occur before a notification is sent  -->

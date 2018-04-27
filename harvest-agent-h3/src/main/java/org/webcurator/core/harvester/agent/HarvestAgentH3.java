@@ -46,6 +46,8 @@ public class HarvestAgentH3 extends AbstractHarvestAgent implements LogProvider 
     private String baseHarvestDirectory = "";
     /** the name of the harvest agent. */
     private String name = "";
+    /** the harvester type of the harvest agent. */
+    private String harvesterType = "";
     /** the host name of the harvest agent. */
     private String host = "";
     /** the harvest agent control port. */
@@ -401,6 +403,7 @@ public class HarvestAgentH3 extends AbstractHarvestAgent implements LogProvider 
         status.setService(service);
         status.setLogReaderService(logReaderService);
         status.setName(name);
+        status.setHarvesterType(harvesterType);
         status.setMaxHarvests(maxHarvests);
         status.setAllowedAgencies(allowedAgencies);
         status.setMemoryAvailable(Runtime.getRuntime().freeMemory()/1024);
@@ -586,6 +589,20 @@ public class HarvestAgentH3 extends AbstractHarvestAgent implements LogProvider 
      */
     public void setName(String aName) {
         this.name = aName;
+    }
+
+    /**
+     +     * @return Returns the crawler type.
+     +     */
+    public String getHarvesterType() {
+        return harvesterType;
+     }
+
+     /**
+     * @param aHarvesterType The crawler type to set.
+     */
+     public void setHarvesterType(String aHarvesterType) {
+        this.harvesterType = aHarvesterType;
     }
 
     /**
