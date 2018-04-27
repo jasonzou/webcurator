@@ -54,6 +54,8 @@ public class HarvestAgentHeritrix extends AbstractHarvestAgent implements LogPro
     private String baseHarvestDirectory = "";
     /** the name of the harvest agent. */
     private String name = "";
+    /** the harvester type of the harvest agent. */
+    private String harvesterType = "";
     /** the host name of the harvest agent. */
     private String host = "";
     /** the harvest agent control port. */
@@ -330,6 +332,7 @@ public class HarvestAgentHeritrix extends AbstractHarvestAgent implements LogPro
         status.setService(service);
         status.setLogReaderService(logReaderService);
         status.setName(name);
+        status.setHarvesterType(harvesterType);
         status.setMaxHarvests(maxHarvests);    
         status.setAllowedAgencies(allowedAgencies);
         status.setMemoryAvailable(Runtime.getRuntime().freeMemory()/1024);
@@ -508,6 +511,20 @@ public class HarvestAgentHeritrix extends AbstractHarvestAgent implements LogPro
      */
     public void setName(String aName) {
         this.name = aName;
+    }
+
+    /**
+    * @return Returns the harvester type.
+    */
+    public String getHarvesterType() {
+        return harvesterType;
+    }
+
+    /**
+    * @param aHarvesterType The harvester type to set.
+    */
+    public void setHarvesterType(String aHarvesterType) {
+        this.harvesterType = aHarvesterType;
     }
 
     /**
